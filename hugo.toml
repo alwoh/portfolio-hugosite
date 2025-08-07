@@ -1,0 +1,7 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = "Alex's Portfolio"
+theme = "basic"
+[params]
+    author = "Alex Wohlleber"
+    description = "My portfolio site"
