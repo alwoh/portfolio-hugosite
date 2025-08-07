@@ -1,13 +1,14 @@
 ---
 title: "Awesomeco"
 draft: false
+image: https://placehold.co/640x150
+alt_text: "Awesomeco screenshot"
+summary: "Summary of the Awesomeco project."
+tech_used:
+- item
+- item
+- item
 ---
 
-![alt](//via.placeholder.com/640x150)
+Description of the Awesomeco project...
 
-Description...
-
-### Tech used
-* item
-* item
-* item

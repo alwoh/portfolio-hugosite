@@ -40,10 +40,10 @@ nav > a {
   nav { flex-direction: row; }
 }
 
-a {
+/* a {
   color: #00e;
   text-decoration: none;
-}
+} */
 
 @media  only screen and (min-width: 768px) {
  nav { flex-direction: row;}
@@ -55,3 +55,15 @@ a {
   .project-container .project { flex: 1; padding-left: 1rem; }
 }
 
+.oss {
+display: flex;
+flex-wrap: wrap;
+justify-content: flex-start;
+}
+.oss article {
+border: 1px solid #ddd;
+box-shadow: 3px 3px 3px #ddd;
+margin: 0.5%;
+padding: 0.5%;
+width: 32%;
+}

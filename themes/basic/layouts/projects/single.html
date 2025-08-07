@@ -12,6 +12,15 @@
         <h2>{{ .Title }}</h2>
         
         {{ .Content }}
+
+        <img alt="{{ .Params.alt_text }}" src="{{ .Params.image }}" class="project-image">
+
+        <h3>Tech used</h3>
+        <ul>
+            {{ range .Params.tech_used }}
+                <li>{{ . }}</li>
+            {{ end }}
+        </ul>
         
     </section>   
 </div>

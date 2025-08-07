@@ -1,7 +1,26 @@
 <meta name="author" content="{{ .Site.Params.author }}">
-<meta name="description" content="{{ .Site.Params.description }}">
+<meta name="description" content="
+    {{- with .Page.Description -}}
+        {{ . }}
+    {{- else -}}
+    {{ .Site.Params.description }}
+    {{- end -}}">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ printf "%s | %s" .Title .Site.Title }}{{ end }}</title>
+<title>
+    {{- if .Page.IsHome -}}
+        {{ .Site.Title }}
+    {{- else -}}
+        {{ .Title }} – {{ .Site.Title }}
+    {{- end -}}
+</title>
 {{ partial "head/css.html" . }}
 {{ partial "head/js.html" . }}
+{{ range .AlternativeOutputFormats -}}
+    {{- $link := `<link rel="%s" type="%s" href="%s" title="%s">` -}}
+    {{- $title := printf "%s - %s" $.Page.Title $.Site.Title -}}
+    {{- if $.Page.IsHome -}}
+        {{ $title = $.Site.Title }}
+    {{- end -}}
+    {{ printf $link .Rel .MediaType.Type .Permalink $title | safeHTML }}
+{{- end }}

@@ -1,0 +1,17 @@
+{{ define "main" }}
+    <h2>{{ .Title }}</h2>
+    {{ .Content }}
+    {{ $url := printf "%s/%s/repos" .Site.Params.gh_url .Site.Params.gh_user }}
+    {{ $remote := resources.GetRemote $url }}
+    {{ $repos := $remote | transform.Unmarshal }}    
+    <section class="oss">
+        {{ range $repos }}        
+        {{ if ne .name "alwoh" }} <!-- removes profile repo -->
+                <article>
+                    <h3><a href="{{ .html_url}}">{{ .name }}</a></h3>
+                    <p>{{ .description }}</p>
+                </article>
+            {{ end }}       
+        {{ end }}
+    </section>
+{{ end }}
