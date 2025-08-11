@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <h2>{{ .Title | strings.FirstUpper }}</h2>
+     
+  {{ range .Paginator.Pages }}
+    {{ partial "post_summary.html" .}}
+  {{ end }}
+
+  {{ template "_internal/pagination.html" . }}
+     
+{{ end }}

@@ -2,8 +2,40 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = "Alex's Portfolio"
 theme = "basic"
+capitalizeListTitles = false
 [params]
-    author = "Alex Wohlleber"
-    description = "My portfolio site"
-    gh_url = "https://api.github.com/users"
-    gh_user = "alwoh"
+  author = "Alex Wohlleber"
+  description = "My portfolio site"
+  gh_url = "https://api.github.com/users"
+  gh_user = "alwoh"
+[taxonomies]
+  tag = "tags"
+  category = "categories"    
+  year = "years"
+  month = "months"
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = 'github'
+    tabWidth = 4
+    wrapperClass = 'highlight'
+[related]
+threshold = 80.0
+includeNewer = false
+toLower = false
+
+  [[related.indices]]
+  name = "keywords"
+  weight = 100.0
+  [[related.indices]]
+  name = "date"
+  weight = 10.0

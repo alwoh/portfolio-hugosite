@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <h2>{{ .Title }}</h2>
+  <ul>
+    {{ range .Data.Terms.Alphabetical }}
+    <p class="years">
+      <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>      
+    </p>
+  {{ end }}
+  </ul>
+{{ end }}
