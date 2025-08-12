@@ -14,8 +14,6 @@
         {{ .Title }} – {{ .Site.Title }}
     {{- end -}}
 </title>
-{{ partial "head/css.html" . }}
-{{ partial "head/js.html" . }}
 {{ range .AlternativeOutputFormats -}}
     {{- $link := `<link rel="%s" type="%s" href="%s" title="%s">` -}}
     {{- $title := printf "%s - %s" $.Page.Title $.Site.Title -}}
