@@ -1,5 +1,5 @@
 # My Portfolio Site
-This is a bookstore that uses HTML, CSS, JavaScript, and HUGO framework.
+This is a portfolio site that uses HTML, CSS, JavaScript, and HUGO framework.
 
 ## How It's Made:
 
