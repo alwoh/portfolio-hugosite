@@ -1,6 +1,6 @@
 baseURL = 'https://alexwohlleber.netlify.app'
 languageCode = 'en-us'
-title = "Alex's Portfolio"
+title = "Alex Wohlleber"
 theme = "basic"
 capitalizeListTitles = false
 [params]
