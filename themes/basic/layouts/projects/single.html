@@ -16,9 +16,9 @@
         <img alt="{{ .Params.alt_text }}" src="{{ .Params.image }}" class="project-image">
 
         <h3>Tech used</h3>
-        <ul>
+        <ul style="list-style: none; padding: 0;">           
             {{ range .Params.tech_used }}
-                <li>{{ . }}</li>
+                <li>{{ . | safeHTML }}</li>
             {{ end }}
         </ul>
         
