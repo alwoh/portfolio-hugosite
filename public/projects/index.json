@@ -1,0 +1,12 @@
+{
+    "projects": [
+        {
+        "url": "http://localhost:1313/projects/awesomeco/",
+        "title": "Awesomeco"
+        },
+        {
+        "url": "http://localhost:1313/projects/bookstore/",
+        "title": "Bookstore"
+        }
+    ]
+}

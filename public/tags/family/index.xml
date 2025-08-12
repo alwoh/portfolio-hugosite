@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>family on Alex&#39;s Portfolio</title>
+    <link>http://localhost:1313/tags/family/</link>
+    <description>Recent content in family on Alex&#39;s Portfolio</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Aug 2025 08:11:46 -0600</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/family/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Camp Trip</title>
+      <link>http://localhost:1313/posts/my-camp-trip/</link>
+      <pubDate>Tue, 12 Aug 2025 08:11:46 -0600</pubDate>
+      <guid>http://localhost:1313/posts/my-camp-trip/</guid>
+      <description>&lt;p&gt;Here are pictures from my recent camp trip to Columbine Lake.&lt;/p&gt;&#xA;&lt;p&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;figure class=&#34;post-figure&#34;&gt;&#xD;&#xA;    &lt;a href=&#34;http://localhost:1313/posts/my-camp-trip/IMG_9217_hu_a391702807eb1ca4.jpg&#34;&gt;&#xD;&#xA;        &#xD;&#xA;        &lt;img src=&#34;http://localhost:1313/posts/my-camp-trip/IMG_9217_hu_b0f3d20e8d2fccf3.jpg&#34;&#xD;&#xA;            width=&#34;600&#34; height=&#34;800&#34;&#xD;&#xA;            alt=&#34;Columbine Lake&#34; /&gt;&#xD;&#xA;        &#xD;&#xA;    &lt;/a&gt;&#xD;&#xA;    &lt;figcaption&gt;Columbine Lake&lt;/figcaption&gt;&#xD;&#xA;&lt;/figure&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;figure class=&#34;post-figure&#34;&gt;&#xD;&#xA;    &lt;a href=&#34;http://localhost:1313/posts/my-camp-trip/IMG_9221_hu_49fdd5ef160685b0.jpg&#34;&gt;&#xD;&#xA;        &#xD;&#xA;        &lt;img src=&#34;http://localhost:1313/posts/my-camp-trip/IMG_9221_hu_708b2ae2cc0e8e72.jpg&#34;&#xD;&#xA;            width=&#34;600&#34; height=&#34;800&#34;&#xD;&#xA;            alt=&#34;Columbine Lake&#34; /&gt;&#xD;&#xA;        &#xD;&#xA;    &lt;/a&gt;&#xD;&#xA;    &lt;figcaption&gt;Columbine Lake&lt;/figcaption&gt;&#xD;&#xA;&lt;/figure&gt;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
