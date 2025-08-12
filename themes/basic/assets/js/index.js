@@ -1,4 +1,8 @@
 'use strict'
+
+import axios from 'axios';
+import lunr from 'lunr';
+
 window.SearchApp = {
     searchField: document.getElementById('searchField'),
     searchButton: document.getElementById('searchButton'),

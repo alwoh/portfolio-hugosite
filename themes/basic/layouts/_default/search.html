@@ -10,7 +10,12 @@
     <p>Waiting for search input</p>
   </div>  
   
-  <script src="https://unpkg.com/lunr/lunr.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="{{ "js/search.js" | relURL }}"></script>
+
+  {{ $lunr := resources.Get "js/lunr.js" }}
+  {{ $axios := resources.Get "js/axios.js" }}
+  {{ $search := resources.Get "js/search.js" }}
+  {{ $libs := slice $lunr $axios $search }}
+  {{ $js := resources.Get "js/app.js" | minify | fingerprint }}
+  <script src="{{ $js.RelPermalink }}"></script>
+ 
 {{ end }}
