@@ -5,7 +5,7 @@
     "private": true,
     "scripts": {
         "build": "npm-run-all webpack hugo-build",
-        "hugo-build": "hugo --cleanDestinationDir -b https://alexwohlleber.netlify.app/",
+        "hugo-build": "hugo --cleanDestinationDir",
         "hugo-server": "hugo server --disableFastRender",
         "webpack": "webpack",
         "webpack-watch": "webpack --watch",
