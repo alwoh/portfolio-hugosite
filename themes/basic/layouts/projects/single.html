@@ -1,16 +1,8 @@
 {{ define "main" }}
-<div class="project-container">
-    <section class="project-list">
-        <h2>Projects</h2>
-        <ul>
-            {{ range (where .Site.RegularPages "Type" "project").ByDate.Reverse }}
-                <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-            {{ end }}
-        </ul>
-    </section>
+<div class="project-container">    
     <section class="project">
         <h2>{{ .Title }}</h2>
-        
+        <a href="{{ .Params.repolink }}">Github Repo</a>
         {{ .Content }}
 
         <img alt="{{ .Params.alt_text }}" src="{{ .Params.image }}" class="project-image">
