@@ -7,11 +7,15 @@
     <section class="oss">
         {{ range $repos }}        
         {{ if ne .name "alwoh" }} <!-- removes profile repo -->
-                    {{ $imageFileName := (print .name ".png" ) }}   
-                    {{ $imageAndPath := (print "opensource/" $imageFileName)}}
-                    {{ $isThereAnImage := fileExists $imageAndPath }}    
-                    {{ if $isThereAnImage }}
-                       {{ $image := $.Page.Resources.GetMatch $imageFileName }}
+                    {{ $reposWithOutImage := slice "portfolio-hugosite"}}
+                    {{ $imageFileName := (print .name ".png" ) }}                       
+                    {{ if in $reposWithOutImage .name }}                        
+                        <div class="oss-without-image">
+                            <h3><a href="{{ .html_url}}">{{ .name }}</a></h3>
+                            <p>{{ .description }}</p> 
+                        </div>                      
+                    {{ else }}
+                        {{ $image := $.Page.Resources.GetMatch $imageFileName }}
                        <div class="oss-with-image">                           
                             <h3><a href="{{ .html_url}}">{{ .name }}</a></h3>
                             <p>{{ .description }}</p> 
@@ -20,14 +24,8 @@
                             </a>
                             <p style="font-size: 14px;">Click for full-size image</p>
                         </div>
-                    {{ else }}
-                        <div class="oss-without-image">
-                            <h3><a href="{{ .html_url}}">{{ .name }}</a></h3>
-                            <p>{{ .description }}</p> 
-                        </div>
                     {{ end }}                                                                                                                                        
             {{ end }}       
         {{ end }}
-    </section>
-    <img src="bookstore.png">
+    </section>    
 {{ end }}
