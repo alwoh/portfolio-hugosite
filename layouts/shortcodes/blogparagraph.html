@@ -1,0 +1,8 @@
+{{ $maxWidth:= "max-width: 60ch" }}
+{{ $newSize := (.Get 1) }}
+{{ if ne $newSize "" }}
+    {{ $styleChange := (print "max-width: " $newSize "ch") }}
+    {{ $maxWidth = $styleChange}}    
+{{ end }}
+
+<p style="{{ $maxWidth }}">{{ $.Get 0 }}</p>

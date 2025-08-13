@@ -7,10 +7,25 @@
     <section class="oss">
         {{ range $repos }}        
         {{ if ne .name "alwoh" }} <!-- removes profile repo -->
-                <article>
-                    <h3><a href="{{ .html_url}}">{{ .name }}</a></h3>
-                    <p>{{ .description }}</p>
-                </article>
+                    {{ $imageFileName := (print .name ".png" ) }}   
+                    {{ $imageAndPath := (print "content/opensource/" $imageFileName)}}
+                    {{ $isThereAnImage := fileExists $imageAndPath }}    
+                    {{ if $isThereAnImage }}
+                       {{ $image := $.Page.Resources.GetMatch $imageFileName }}
+                       <div class="oss-with-image">                           
+                            <h3><a href="{{ .html_url}}">{{ .name }}</a></h3>
+                            <p>{{ .description }}</p> 
+                            <a href="{{ $image.RelPermalink }}">
+                                <img src="{{ $imageFileName }}">
+                            </a>
+                            <p style="font-size: 14px;">Click for full-size image</p>
+                        </div>
+                    {{ else }}
+                        <div class="oss-without-image">
+                            <h3><a href="{{ .html_url}}">{{ .name }}</a></h3>
+                            <p>{{ .description }}</p> 
+                        </div>
+                    {{ end }}                                                                                                                                        
             {{ end }}       
         {{ end }}
     </section>

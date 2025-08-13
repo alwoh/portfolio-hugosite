@@ -11,12 +11,9 @@ tags:
 - family
 ---
 
-Here are pictures from my recent camp trip to Columbine Lake.
-
-{{< postimage "IMG_9217.jpg" "Columbine Lake" "600" >}}
-{{< postimage "IMG_9221.jpg" "Columbine Lake" "600" >}}
-
+{{< blogparagraph "Here are pictures from my recent camp trip to Columbine Lake.  It was my first time backpacking and we trekked 3 miles from the trailhead parking.  We used the AllTrails app to track our progress, and while it gave it a moderate difficulty rating I'd say with what we packed it was little more than moderate." "">}}
+  
 <!--more-->
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-aliquip ex ea commodo consequat.
+{{< postimage "IMG_9217.jpg" true "Columbine Lake" "600x">}}
+{{< postimage "IMG_9221.jpg" true "Columbine Lake" "600x">}}

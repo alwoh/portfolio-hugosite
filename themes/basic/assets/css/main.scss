@@ -1,3 +1,24 @@
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.header-flex h1 {
+  margin: 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.social-icons a:hover svg {
+  color: #d1d1d1;
+  fill: #d1d1d1;
+}
+
 .container {
   margin: 0 auto;
   width: 80%;
@@ -9,20 +30,51 @@ nav, footer {
   text-align: center;
 }
 
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-size: 1.25em;
+  font-weight: 600;
+}
+nav a:hover {
+  color: #d1d1d1;
+}
+
+footer {  
+  padding-top: 7px;
+}
+
 @import 'navbar';
 
 .oss {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  padding: 15px 0px 15px;
 }
 
-.oss article {
+.oss .oss-with-image {
   border: 1px solid #ddd;
   box-shadow: 3px 3px 3px #ddd;
   margin: 0.5%;
   padding: 0.5%;
-  width: 32%;
+  width: 400px;
+  height: 300px;
+}
+
+.oss .oss-without-image {
+  border: 1px solid #ddd;
+  box-shadow: 3px 3px 3px #ddd;
+  margin: 0.5%;
+  padding: 0.5%;
+  width: 400px;
+  height: 100px;
+}
+
+.oss img {
+  width: 100%;  
+  object-fit: contain;
 }
 
 a.tag {
@@ -85,3 +137,10 @@ figure img {
 }
 
 @import 'fonts';
+
+.box {  
+  display: flex;
+  align-items: stretch;
+}
+
+

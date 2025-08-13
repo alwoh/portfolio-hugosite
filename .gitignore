@@ -2,3 +2,4 @@
 node_modules
 # exclude Hugo's output
 public
+resources

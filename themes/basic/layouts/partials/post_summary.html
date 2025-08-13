@@ -8,5 +8,9 @@
             {{ .Date | dateFormat "2" }}
         </time>
     </header>
-    {{ .Summary }}
+     <p>
+        {{ .Content | strings.Truncate 42 }}
+        <a href="{{ .RelPermalink }}">More ...</a>
+    </p>
+    
 </article>
