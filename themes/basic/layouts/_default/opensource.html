@@ -8,7 +8,7 @@
         {{ range $repos }}        
         {{ if ne .name "alwoh" }} <!-- removes profile repo -->
                     {{ $imageFileName := (print .name ".png" ) }}   
-                    {{ $imageAndPath := (print "content/opensource/" $imageFileName)}}
+                    {{ $imageAndPath := (print "opensource/" $imageFileName)}}
                     {{ $isThereAnImage := fileExists $imageAndPath }}    
                     {{ if $isThereAnImage }}
                        {{ $image := $.Page.Resources.GetMatch $imageFileName }}
