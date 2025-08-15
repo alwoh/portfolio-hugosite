@@ -1,0 +1,39 @@
+.toggleDarkModeDiv {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.toggleDarkModeButton {
+  margin:0; 
+  padding: 7px; 
+  background:#23272a; 
+  color:#ffffff; 
+  border-radius:4px; 
+  cursor:pointer;
+}
+
+
+.darkmode {
+  background: #181818;
+  color: #eaeaea;
+
+    header, nav, footer {
+    background: #23272a;
+    color: #eaeaea;
+    }
+    .box, .container {
+    background: #242424;
+    color: #eaeaea;
+    border-radius: 8px;
+    }
+    a, nav a {
+    color: #eaeaea;
+    }
+    .social-icons a {
+    background: #23272a;
+    color: #eaeaea;
+    }
+}

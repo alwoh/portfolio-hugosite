@@ -28,6 +28,10 @@
     height: 28px;
     margin: 2px 2px;
   }
+  .toggleDarkModeDiv {
+    margin-right: auto;        
+    padding: 15px;
+  }
 }
 .header-flex {
   display: flex;
@@ -174,4 +178,4 @@ figure img {
   align-items: stretch;
 }
 
-
+@import 'darkmode';

@@ -23,7 +23,10 @@
   .social-icons a {
     width: 28px;
     height: 28px;
-    margin: 2px 2px; } }
+    margin: 2px 2px; }
+  .toggleDarkModeDiv {
+    margin-right: auto;
+    padding: 15px; } }
 
 .header-flex {
   display: flex;
@@ -173,3 +176,34 @@ figure img {
 .box {
   display: flex;
   align-items: stretch; }
+
+.toggleDarkModeDiv {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: auto; }
+
+.toggleDarkModeButton {
+  margin: 0;
+  padding: 7px;
+  background: #23272a;
+  color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer; }
+
+.darkmode {
+  background: #181818;
+  color: #eaeaea; }
+  .darkmode header, .darkmode nav, .darkmode footer {
+    background: #23272a;
+    color: #eaeaea; }
+  .darkmode .box, .darkmode .container {
+    background: #242424;
+    color: #eaeaea;
+    border-radius: 8px; }
+  .darkmode a, .darkmode nav a {
+    color: #eaeaea; }
+  .darkmode .social-icons a {
+    background: #23272a;
+    color: #eaeaea; }
