@@ -77,14 +77,13 @@ if (SearchApp.searchButton) {
 }   
 
 function setTheme(newTheme, buttonElement) {
-  var bodyEl = document.body;
+  var bodyEl = document.body;  
   if (newTheme === "dark") {
-    bodyEl.classList.add("darkmode");
-    buttonElement.innerText = "Toggle Light Mode";  
+    bodyEl.classList.add("darkmode");     
   } else {
     bodyEl.classList.remove("darkmode");
-    buttonElement.innerText = "Toggle Dark Mode";
   }
+  buttonElement.innerText = bodyEl.classList.contains("darkmode") ? "Toggle Light Mode" : "Toggle Dark Mode";
   localStorage.setItem("__theme", newTheme);
 }
 
@@ -97,6 +96,7 @@ if (darkModeToggle) {
 }
 
 const storedTheme = localStorage.getItem("__theme");
-if (storedTheme) {
-  setTheme(storedTheme);
+
+if (storedTheme) {        
+    setTheme(storedTheme, darkModeToggle);
 }
