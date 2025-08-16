@@ -20,20 +20,41 @@
   background: #181818;
   color: #eaeaea;
 
-    header, nav, footer {
+    nav, footer {
     background: #23272a;
     color: #eaeaea;
     }
-    .box, .container {
+    header, .box, .container {
     background: #242424;
     color: #eaeaea;
     border-radius: 8px;
     }
-    a, nav a {
+
+    nav a {
     color: #eaeaea;
     }
     .social-icons a {
     background: #23272a;
     color: #eaeaea;
+    }
+
+    .toggleDarkModeButton {
+        margin:0; 
+        padding: 7px; 
+        color:#23272a; 
+        background-color:#ffffff; 
+        border-radius:4px; 
+        cursor:pointer;
+    }
+    a {
+        color: #3dc3f8;        
+    }
+    a.tag {
+        color: #ddd;
+        background-color: #555454;
+        display: inline-block;
+        padding: 0.1em;
+        font-size: 0.9em;
+        text-decoration: none;
     }
 }

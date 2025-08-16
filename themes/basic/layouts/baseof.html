@@ -17,4 +17,8 @@
 	  </footer>
 	</div>
 </body>
+{{ $index := resources.Get "js/index.js" }}
+{{ $libs := slice $index }}
+{{ $js := resources.Get "js/app.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}"></script>
 </html>

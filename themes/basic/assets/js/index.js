@@ -28,48 +28,75 @@ axios
         });
     });
 
-SearchApp.searchButton.addEventListener('click', search);
+if (SearchApp.searchButton) {    
+    SearchApp.searchButton.addEventListener('click', search);
 
-function search() {
-    let searchText = SearchApp.searchField.value;
+    function search() {
+        let searchText = SearchApp.searchField.value;
 
-    if (searchText.length === 0) {
-        SearchApp.output.innerHTML = '<p>Please enter a search term.</p>';
-        return;
-    }
+        if (searchText.length === 0) {
+            SearchApp.output.innerHTML = '<p>Please enter a search term.</p>';
+            return;
+        }
 
-    searchText = searchText
-        .split(" ")
-        .map(function (word) {
-            return word + "*";
-        })
-        .join(" ");
-
-    if (SearchApp.allwords.checked) {
         searchText = searchText
             .split(" ")
             .map(function (word) {
-                return "+" + word;
+                return word + "*";
             })
             .join(" ");
-    }
-        
-    let resultList = SearchApp.searchIndex.search(searchText);
 
-    let list = [];
-    let results = resultList.map(function (result) {
-        let doc = SearchApp.searchData.find(function (doc) {
-            return doc.href === result.ref;
-        });
-        if (doc) {
-            list.push(`<li><a href="${doc.href}">${doc.title}</a></li>`);
+        if (SearchApp.allwords.checked) {
+            searchText = searchText
+                .split(" ")
+                .map(function (word) {
+                    return "+" + word;
+                })
+                .join(" ");
         }
-    });
+            
+        let resultList = SearchApp.searchIndex.search(searchText);
 
-    if (list.length === 0) {
-        SearchApp.output.innerHTML = '<p>No results found.</p>';
+        let list = [];
+        let results = resultList.map(function (result) {
+            let doc = SearchApp.searchData.find(function (doc) {
+                return doc.href === result.ref;
+            });
+            if (doc) {
+                list.push(`<li><a href="${doc.href}">${doc.title}</a></li>`);
+            }
+        });
+
+        if (list.length === 0) {
+            SearchApp.output.innerHTML = '<p>No results found.</p>';
+        }
+        else {
+            SearchApp.output.innerHTML = `<ul>${list.join('')}</ul>`;
+        }    
     }
-    else {
-        SearchApp.output.innerHTML = `<ul>${list.join('')}</ul>`;
-    }    
+}   
+
+function setTheme(newTheme, buttonElement) {
+  var bodyEl = document.body;
+  if (newTheme === "dark") {
+    bodyEl.classList.add("darkmode");
+    buttonElement.innerText = "Toggle Light Mode";  
+  } else {
+    bodyEl.classList.remove("darkmode");
+    buttonElement.innerText = "Toggle Dark Mode";
+  }
+  localStorage.setItem("__theme", newTheme);
+}
+
+const darkModeToggle = document.getElementById('darkModeButton');
+if (darkModeToggle) {
+  darkModeToggle.addEventListener('click', function() {
+    const isDark = document.body.classList.contains("darkmode");
+    setTheme(isDark ? "light" : "dark", darkModeToggle);
+  });
+}
+
+const storedTheme = localStorage.getItem("__theme");
+if (storedTheme) {
+  setTheme(storedTheme);
 }

@@ -195,15 +195,31 @@ figure img {
 .darkmode {
   background: #181818;
   color: #eaeaea; }
-  .darkmode header, .darkmode nav, .darkmode footer {
+  .darkmode nav, .darkmode footer {
     background: #23272a;
     color: #eaeaea; }
-  .darkmode .box, .darkmode .container {
+  .darkmode header, .darkmode .box, .darkmode .container {
     background: #242424;
     color: #eaeaea;
     border-radius: 8px; }
-  .darkmode a, .darkmode nav a {
+  .darkmode nav a {
     color: #eaeaea; }
   .darkmode .social-icons a {
     background: #23272a;
     color: #eaeaea; }
+  .darkmode .toggleDarkModeButton {
+    margin: 0;
+    padding: 7px;
+    color: #23272a;
+    background-color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer; }
+  .darkmode a {
+    color: #3dc3f8; }
+  .darkmode a.tag {
+    color: #ddd;
+    background-color: #555454;
+    display: inline-block;
+    padding: 0.1em;
+    font-size: 0.9em;
+    text-decoration: none; }
