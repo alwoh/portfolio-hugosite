@@ -6,7 +6,7 @@ author: Alex Wohlleber
 
 Hi, I'm Alex!
 
-{{< blogparagraph "I'm a software engineer with an extensive background in .NET and a passion for building robust, scalable applications. My expertise is complemented by a drive to continuously learn new technologies, and being a collaborative team player dedicated to helping others succeed." "100">}}
+{{< blogparagraph "I'm a database coordinator for marketing at a casino, where I manage and streamline data systems to support targeted campaigns and strategic decision-making. Alongside my current role, I continue to grow as a developer—exploring new tools, building scalable solutions, and staying curious about emerging technologies. I thrive in collaborative environments and bring a proactive mindset to every challenge." "100">}}
 
 On this site, you'll find
 
