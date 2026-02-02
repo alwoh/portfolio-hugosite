@@ -77,11 +77,20 @@ if (SearchApp.searchButton) {
 }   
 
 function setTheme(newTheme, buttonElement) {
-  var bodyEl = document.body;  
+  var bodyEl = document.body;
+  const imageElement = document.getElementById('meImage');
   if (newTheme === "dark") {
-    bodyEl.classList.add("darkmode");     
+    bodyEl.classList.add("darkmode");
+    if (imageElement)
+    {
+        imageElement.src = "Me.png"
+    }      
   } else {
     bodyEl.classList.remove("darkmode");
+    if (imageElement)
+    {
+        imageElement.src = "Me_dithered.png"
+    }
   }
   buttonElement.innerText = bodyEl.classList.contains("darkmode") ? "Toggle Light Mode" : "Toggle Dark Mode";
   localStorage.setItem("__theme", newTheme);
