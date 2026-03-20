@@ -18,7 +18,7 @@ tags:
 
 {{< blogparagraph "Currently, I have a somewhat out-of-the-box setup for my development environment.   What I wanted was the ability to do most of my work within the terminal.  So I was able to go through the ChromeOS settings and turn on the Linux development environment." "">}}
 
-{{< blogparagraph "Then, to set up all my development software installed a couple of things to make it easier to get around without much use of a touchpad or mouse." "">}}
+{{< blogparagraph "Then, to set up all my development software I installed a couple of things to make it easier to get around without much use of a touchpad or mouse." "">}}
 
 {{< blogparagraph "First, tmux, a terminal multiplexer, allows me to open multiple terminal sessions." "">}}
 
