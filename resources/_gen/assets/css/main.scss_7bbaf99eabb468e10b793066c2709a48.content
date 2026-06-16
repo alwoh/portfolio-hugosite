@@ -16,7 +16,8 @@
 @media (max-width: 600px) {
   .header-flex {
     flex-direction: column;
-    align-items: flex-start; }
+    align-items: flex-start;
+    margin: 10px 0px; }
   .social-icons {
     justify-content: flex-start;
     gap: 0.25rem; }
@@ -32,7 +33,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 1rem; }
+  gap: 1rem;
+  margin: 10px 0px; }
 
 .header-flex h1 {
   margin: 0; }
@@ -49,9 +51,12 @@
   margin: 0 auto;
   width: 80%; }
 
-nav, footer {
-  background-color: #333;
-  color: #fff;
+nav {
+  background-color: #fff; }
+
+footer {
+  background-color: #fff;
+  color: #333;
   text-align: center; }
 
 nav a {
@@ -67,19 +72,147 @@ nav a:hover {
 footer {
   padding-top: 7px; }
 
-nav {
+/* nav {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 nav > a {
   flex: 1;
   text-align: center;
   text-decoration: none;
-  color: #fff; }
+  color: #fff;
+}
 
-@media only screen and (min-width: 768px) {
-  nav {
-    flex-direction: row; } }
+@media  only screen and (min-width: 768px) {
+  nav { flex-direction: row;}
+}
+*/
+/*
+*,
+::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navcontainer {
+ // width: 100vw;
+ // min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  background: #36454F;
+  flex-direction: column;
+ // flex-wrap: wrap;
+}
+*/
+/* Navbar container */
+.navbar {
+  padding: 20px;
+  background-color: #ffffff;
+  /* Keeps background clean white like the image */ }
+
+/* Flexbox layout to align items horizontally and wrap onto a new line if needed */
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  /* Subtle spacing around links and slashes */ }
+
+/* Styling the individual links */
+.nav-links a {
+  text-decoration: none;
+  color: #000000;
+  /* Set to pure black as requested */
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease-in-out; }
+
+/* Optional: Subtle hover effect so users know it's clickable */
+.nav-links a:hover {
+  color: #555555; }
+
+/* Styling the forward slash separators */
+.separator {
+  color: #000000;
+  /* Keeps the slashes black */
+  font-weight: bold;
+  font-size: 18px;
+  user-select: none;
+  /* Prevents users from accidentally highlighting the slashes */ }
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  height: 80px; }
+
+.nav--list {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+
+.item {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 30px;
+  background: #1B1212;
+  transform: translateZ(0) rotate(-30deg) skew(25deg) translate(0, 0);
+  transition: transform 400ms linear; }
+
+.item a {
+  text-align: center;
+  text-shadow: 2px 2px 1px #333;
+  user-select: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #E5E4E2;
+  letter-spacing: 3px;
+  z-index: 2;
+  text-decoration: none;
+  transform: translateZ(0) translate(0, 0);
+  display: block; }
+
+.item:hover {
+  transform: translateZ(0) rotate(-30deg) skew(25deg) translate(10px, -10px); }
+
+.item:before,
+.item:after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  background: #797979; }
+
+.item:before {
+  width: 15px;
+  height: 100%;
+  top: 0px;
+  transform: translateZ(0) rotate(0deg) skewY(-45deg) translate(-5px, 2px); }
+
+.item:after {
+  width: 100%;
+  height: 15px;
+  top: 40px;
+  transform: translateZ(0) rotate(0deg) skewX(-45deg) translate(2px, 0px); }
+
+@media (max-width: 600px) {
+  .navbar {
+    display: none; } }
 
 .oss {
   display: flex;
