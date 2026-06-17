@@ -21,20 +21,29 @@
   color: #eaeaea;
 
     nav, footer {
-    background: #23272a;
+    background: #181818;
     color: #eaeaea;
     }
     header, .box, .container {
-    background: #242424;
+    background: #181818;
     color: #eaeaea;
     border-radius: 8px;
     }
-
+    .item {
+      background-color:#ffffff;
+      color: #181818;
+    }
+    .item:hover{
+      background-color:#DBDBDB;
+    }
+    .separator{
+      color: #ffffff;  
+    }
     nav a {
     color: #eaeaea;
     }
     .social-icons a {
-    background: #23272a;
+    background: #181818;
     color: #eaeaea;
     }
 

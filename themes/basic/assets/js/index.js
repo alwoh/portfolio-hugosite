@@ -81,31 +81,37 @@ function setTheme(newTheme, buttonElement) {
   const imageElement = document.getElementById('meImage');
   if (newTheme === "dark") {
     bodyEl.classList.add("darkmode");
+    document.getElementById('sunButton').style.display = "inline-flex";
+    document.getElementById('moonButton').style.display = "none";
     if (imageElement)
     {
         imageElement.src = "Me.png"
     }      
   } else {
     bodyEl.classList.remove("darkmode");
+    document.getElementById('sunButton').style.display = "none";
+    document.getElementById('moonButton').style.display = "inline-flex";
     if (imageElement)
     {
         imageElement.src = "Me_dithered.png"
     }
   }
-  buttonElement.innerText = bodyEl.classList.contains("darkmode") ? "Toggle Light Mode" : "Toggle Dark Mode";
+//  buttonElement.innerText = bodyEl.classList.contains("darkmode") ? "Toggle Light Mode" : "Toggle Dark Mode";
   localStorage.setItem("__theme", newTheme);
 }
 
-const darkModeToggle = document.getElementById('darkModeButton');
-if (darkModeToggle) {
-  darkModeToggle.addEventListener('click', function() {
-    const isDark = document.body.classList.contains("darkmode");
-    setTheme(isDark ? "light" : "dark", darkModeToggle);
-  });
-}
+const darkModeToggles = document.querySelectorAll('.darkModeButton');
 
+darkModeToggles.forEach(function(toggle) {
+  toggle.addEventListener('click', function() {
+    const isDark = document.body.classList.contains("darkmode");
+    
+    // Pass the specific 'toggle' that was clicked to your setTheme function
+    setTheme(isDark ? "light" : "dark", toggle);
+  });
+});
 const storedTheme = localStorage.getItem("__theme");
 
 if (storedTheme) {        
-    setTheme(storedTheme, darkModeToggle);
+    setTheme(storedTheme, darkModeToggles);
 }

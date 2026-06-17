@@ -214,6 +214,10 @@ nav > a {
   .navbar {
     display: none; } }
 
+@media only screen and (min-width: 768px) {
+  .navbarMobile {
+    display: none; } }
+
 .oss {
   display: flex;
   flex-wrap: wrap;
@@ -329,16 +333,23 @@ figure img {
   background: #181818;
   color: #eaeaea; }
   .darkmode nav, .darkmode footer {
-    background: #23272a;
+    background: #181818;
     color: #eaeaea; }
   .darkmode header, .darkmode .box, .darkmode .container {
-    background: #242424;
+    background: #181818;
     color: #eaeaea;
     border-radius: 8px; }
+  .darkmode .item {
+    background-color: #ffffff;
+    color: #181818; }
+  .darkmode .item:hover {
+    background-color: #DBDBDB; }
+  .darkmode .separator {
+    color: #ffffff; }
   .darkmode nav a {
     color: #eaeaea; }
   .darkmode .social-icons a {
-    background: #23272a;
+    background: #181818;
     color: #eaeaea; }
   .darkmode .toggleDarkModeButton {
     margin: 0;
